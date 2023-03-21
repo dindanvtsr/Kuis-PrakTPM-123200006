@@ -40,7 +40,14 @@ class HalamanDetail extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left:15, right: 15),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  if(book.isAvailable == true) {
+                    final snackBar = SnackBar( content: const Text('Berhasil Meminjam Buku'));
+                  }
+                  else {
+                    final snackBar = SnackBar( content: const Text('Gagal Meminjam Buku'));
+                  }
+                },
                 child: Text('Pinjam Buku'),
               )
           ),

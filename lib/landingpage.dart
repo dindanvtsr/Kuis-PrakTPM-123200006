@@ -32,14 +32,13 @@ class LandingPage extends StatelessWidget {
                     height: MediaQuery.of(context).size.height / 3,
                     child: Image.network(book.imageLink),
                   ),
-                  //text
-                  Text(
+                  Flexible(child: Text(
                     book.title,
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
+                  ),),
+                  Flexible(child: Text(
                     book.author,
-                  )
+                  ))
                 ],
               ),
             ),
